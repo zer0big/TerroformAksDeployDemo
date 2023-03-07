@@ -28,6 +28,12 @@ variable "dns_prefix" {
   default     = "zeroaksdemo"
 }
 
+variable "acr_name" {
+  type        = string
+  description = "ACR name in Microsoft Azure"
+  default     = "osd2023zeroacrdemo"
+}
+
 variable "log_analytics_workspace_name" {
   default = "osd2023law4aksdemo"
 }
