@@ -1,37 +1,43 @@
-variable "agent_count" {
-    default = 2
+variable "resource_group_name" {
+  type        = string
+  description = "Resource Group name in Microsoft Azure"
+  default     = "RG-OSD-AKSDemo"
 }
 
-variable "ssh_public_key" {
-    default = "~/.ssh/id_rsa.pub"
+variable "location" {
+  type        = string
+  description = "Resources location in Microsoft Azure"
+  default     = "Korea Central"
+}
+
+variable "system_node_count" {
+  type        = number
+  description = "Number of AKS worker nodes"
+  default     = 2
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "AKS name in Microsoft Azure"
+  default     = "osd2023zeroaksdemo"
 }
 
 variable "dns_prefix" {
-    default = "zerok8stest"
+  type        = string
+  description = "DNS Prefix name of AKS"
+  default     = "zeroaksdemo"
 }
 
-variable cluster_name {
-    default = "zerok8stest"
-}
-
-variable resource_group_name {
-    default = "azure-k8stest"
-}
-
-variable location {
-    default = "Korea Central"
-}
-
-variable log_analytics_workspace_name {
-    default = "testLogAnalyticsWorkspaceName"
+variable "log_analytics_workspace_name" {
+  default = "osd2023law4aksdemo"
 }
 
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
-variable log_analytics_workspace_location {
-    default = "koreacentral"
+variable "log_analytics_workspace_location" {
+  default = "koreacentral"
 }
 
 # refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
-variable log_analytics_workspace_sku {
-    default = "PerGB2018"
+variable "log_analytics_workspace_sku" {
+  default = "PerGB2018"
 }
