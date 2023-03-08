@@ -10,8 +10,3 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
-# resource "azurerm_resource_group" "rg" {
-#   name     = "rg-terraform-aks"
-#   location = "Korea Central"
-# }
