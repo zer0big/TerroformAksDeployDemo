@@ -10,9 +10,9 @@ az aks get-credentials -g $RG_Name -n $AKS_Name
 kubectl get node
 
 # Docker tag and Push to ACR
-docker tag appmod-contapp osd2023zeroacrdemo.azurecr.io/appmod-contapp:latest
+docker tag appmod-contapp osd2023korzeroacrdemo.azurecr.io/appmod-contapp:latest
 az acr login -n osd2023KORzeroacrdemo
-docker push osd2023zeroacrdemo.azurecr.io/appmod-contapp:latest
+docker push osd2023korzeroacrdemo.azurecr.io/appmod-contapp:latest
 
 # Deploy and Expose Application
 kubectl apply -f contapp-deploy-svc.yaml

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: zeroaksdemo
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: zero-aks-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: zero-aks-demo
-          image: osd2023KORzeroacrdemo.azurecr.io/appmod-contapp:latest
+          image: osd2023korzeroacrdemo.azurecr.io/appmod-contapp:latest
           ports:
             - containerPort: 8080
 ---
